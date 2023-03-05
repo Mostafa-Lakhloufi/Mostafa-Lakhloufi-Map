@@ -1,5 +1,10 @@
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.TreeMap;
+
+import kotlin.collections.builders.MapBuilder.ValuesItr;
 
 /**
  * Maps are key/value pairs. They are used in situations where we have some value that we'd like
@@ -26,7 +31,9 @@ public class Lab {
      * so here Integer is a wrapper for int.
      */
     public Map<Integer, String> createMap(){
-        return null;
+        HashMap<Integer, String> integerString = new HashMap<Integer, String>();
+        
+        return integerString; 
     }
 
     /**
@@ -35,8 +42,9 @@ public class Lab {
      * @return the size of map.
      */
     public int getSize(Map<Integer,String> map){
-//        return total number of key/value pairs in the map
-        return 0;
+        //HashSet<Integer, String> map = new HashSet<Integer, String>();
+       //return total number of key/value pairs in the map
+        return map.size();
     }
 
     /**
@@ -48,7 +56,7 @@ public class Lab {
      */
     public void addKeyValuePair(Map<Integer,String> map, int key, String value){
     }
-
+    HashMap<Integer, String> map = new HashMap<Integer, String>();
     /**
      * Get a value from a map given a key.
      * @param map a map to be manipulated.
@@ -56,7 +64,8 @@ public class Lab {
      * @return the value associated with key in map.
      */
     public String getValueFromKey(Map<Integer, String> map, int key){
-        return "";
+    
+        return Values();
     }
 
     /**
@@ -66,6 +75,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeKeyValuePair(Map<Integer, String> map, int key){
+        
     }
 
     /**
@@ -76,6 +86,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void overwriteValue(Map<Integer, String> map, int key, String value){
+        map.put(key,value); 
 
     }
 }

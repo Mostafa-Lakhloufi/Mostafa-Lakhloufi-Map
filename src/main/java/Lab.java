@@ -55,8 +55,9 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addKeyValuePair(Map<Integer,String> map, int key, String value){
+        map.put(key, value);
     }
-    HashMap<Integer, String> map = new HashMap<Integer, String>();
+    //HashMap<Integer, String> map = new HashMap<Integer, String>();
     /**
      * Get a value from a map given a key.
      * @param map a map to be manipulated.
@@ -65,7 +66,7 @@ public class Lab {
      */
     public String getValueFromKey(Map<Integer, String> map, int key){
     
-        return Values();
+        return map.get(key);
     }
 
     /**
@@ -75,7 +76,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeKeyValuePair(Map<Integer, String> map, int key){
-        
+         
+        map.remove(key);
     }
 
     /**
